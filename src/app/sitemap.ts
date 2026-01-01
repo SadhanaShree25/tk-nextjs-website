@@ -1,8 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/blog';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const siteUrl = 'https://luxcrafter.in';
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -14,15 +14,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteUrl}/blog`,
       changeFrequency: 'weekly',
       priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/products`,
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
+    }    
   ];
 
-  const posts = getAllPosts();
+  let posts: any[] = [];
+  try {
+     posts = getAllPosts();
+  } catch (error) {
+     console.error('Sitemap generation error:', error);
+  }
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${siteUrl}/blog/${post.slug}`,
@@ -30,6 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
-
+  
   return [...staticRoutes, ...blogRoutes];
 }

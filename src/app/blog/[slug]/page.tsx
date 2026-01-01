@@ -7,7 +7,7 @@ import { getPostBySlug, getAllPosts } from '@/lib/blog';
 import { compileMDX } from 'next-mdx-remote/rsc';
 import BlogShare from '@/components/BlogShare';
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 
 interface PageProps {
   params: {
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function BlogPost({ params }: PageProps) {
   try {
     const post = getPostBySlug(params.slug);
-    
+
     // Compile MDX content
     const { content } = await compileMDX({
       source: post.content,
@@ -80,12 +80,24 @@ export default async function BlogPost({ params }: PageProps) {
               post.author
             )}
           </div>
-          
         </div>
-        
+
+        {post.coverImage ? (
+          <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg my-10 shadow-lg">
+            <Image
+              src={post.coverImage}
+              alt={post.title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+              priority
+            />
+          </div>
+        ) : null}
+
         {post.youtubeId ? (
-          <div className="mb-8">
-            <div className="relative w-full aspect-video overflow-hidden rounded-lg">
+          <div className="mb-10">
+            <div className="relative w-full aspect-video overflow-hidden rounded-lg shadow-lg">
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src={`https://www.youtube.com/embed/${post.youtubeId}`}
@@ -97,21 +109,12 @@ export default async function BlogPost({ params }: PageProps) {
             </div>
           </div>
         ) : null}
-        <div className="prose prose-lg dark:prose-invert max-w-none">
+
+        <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:text-primary prose-a:text-primary prose-img:rounded-lg">
           {content}
-          {post.coverImage ? (
-          <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg mb-8">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 768px"
-              priority
-            />
+          <div className="my-10 border-t pt-8">
+            <BlogShare title={post.title} slug={post.slug} />
           </div>
-        ) : null}
-        <BlogShare title={post.title} slug={post.slug} />
         </div>
       </article>
     );
