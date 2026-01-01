@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm earthy palette */
+    --background: 40 30% 97%;
+    --foreground: 25 35% 15%;
+
+    --card: 40 25% 95%;
+    --card-foreground: 25 35% 15%;
+
+    --popover: 40 25% 95%;
+    --popover-foreground: 25 35% 15%;
+
+    /* Deep earthy brown */
+    --primary: 25 40% 25%;
+    --primary-foreground: 40 30% 97%;
+
+    /* Warm sand */
+    --secondary: 35 35% 88%;
+    --secondary-foreground: 25 35% 20%;
+
+    /* Soft muted tones */
+    --muted: 35 20% 90%;
+    --muted-foreground: 25 15% 45%;
+
+    /* Clay accent */
+    --accent: 30 45% 40%;
+    --accent-foreground: 40 30% 97%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 30% 97%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 85%;
+    --ring: 25 40% 30%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens for techKoodaram */
+    --warm-glow: 35 60% 70%;
+    --tent-shadow: 25 30% 20%;
+    --sand-light: 38 40% 92%;
+    --clay-deep: 25 45% 30%;
+    --cream: 40 35% 96%;
+
+    /* Sidebar (if needed) */
+    --sidebar-background: 35 30% 95%;
+    --sidebar-foreground: 25 35% 20%;
+    --sidebar-primary: 25 40% 25%;
+    --sidebar-primary-foreground: 40 30% 97%;
+    --sidebar-accent: 35 35% 88%;
+    --sidebar-accent-foreground: 25 35% 20%;
+    --sidebar-border: 35 25% 85%;
+    --sidebar-ring: 25 40% 30%;
+  }
+
+  .dark {
+    --background: 25 30% 8%;
+    --foreground: 40 25% 92%;
+
+    --card: 25 25% 12%;
+    --card-foreground: 40 25% 92%;
+
+    --popover: 25 25% 12%;
+    --popover-foreground: 40 25% 92%;
+
+    --primary: 35 45% 70%;
+    --primary-foreground: 25 30% 10%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 40 25% 90%;
+
+    --muted: 25 15% 20%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 35 40% 55%;
+    --accent-foreground: 25 30% 10%;
+
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 40 30% 97%;
+
+    --border: 25 20% 20%;
+    --input: 25 20% 20%;
+    --ring: 35 40% 60%;
+
+    --warm-glow: 35 50% 50%;
+    --tent-shadow: 25 25% 5%;
+    --sand-light: 25 20% 15%;
+    --clay-deep: 35 35% 55%;
+    --cream: 25 20% 12%;
+
+    --sidebar-background: 25 25% 10%;
+    --sidebar-foreground: 40 25% 92%;
+    --sidebar-primary: 35 45% 70%;
+    --sidebar-primary-foreground: 25 30% 10%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 40 25% 90%;
+    --sidebar-border: 25 20% 20%;
+    --sidebar-ring: 35 40% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gentle glow effect */
+  .warm-glow {
+    box-shadow: 0 0 60px -15px hsl(var(--warm-glow) / 0.4);
+  }
+
+  /* Soft card shadow */
+  .soft-shadow {
+    box-shadow: 
+      0 4px 6px -1px hsl(var(--tent-shadow) / 0.05),
+      0 10px 20px -5px hsl(var(--tent-shadow) / 0.08);
+  }
+
+  /* Flowing section divider */
+  .flow-divider {
+    @apply relative;
+  }
+
+  .flow-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-0.5 rounded-full;
+    background: linear-gradient(90deg, transparent, hsl(var(--accent) / 0.3), transparent);
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent) / 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent) / 0.6);
+}

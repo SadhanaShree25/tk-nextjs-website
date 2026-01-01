@@ -1,0 +1,12 @@
+2:I[9107,[],"ClientPageRoot"]
+3:I[3151,["972","static/chunks/972-836b1d71d4c22848.js","585","static/chunks/585-583a890eeb7c32d0.js","347","static/chunks/347-410bfe2bbe7e10f5.js","931","static/chunks/app/page-4d4053da433009a4.js"],"default",1]
+4:I[2319,["585","static/chunks/585-583a890eeb7c32d0.js","909","static/chunks/909-057d7c0deffaebb4.js","185","static/chunks/app/layout-a28f631de27278c1.js"],"default"]
+5:I[1488,["585","static/chunks/585-583a890eeb7c32d0.js","909","static/chunks/909-057d7c0deffaebb4.js","185","static/chunks/app/layout-a28f631de27278c1.js"],"TooltipProvider"]
+6:I[4707,[],""]
+7:I[6423,[],""]
+8:I[5292,["972","static/chunks/972-836b1d71d4c22848.js","160","static/chunks/app/not-found-39d18cce35b2b681.js"],"default"]
+9:I[7075,["585","static/chunks/585-583a890eeb7c32d0.js","909","static/chunks/909-057d7c0deffaebb4.js","185","static/chunks/app/layout-a28f631de27278c1.js"],"Toaster"]
+a:I[4903,["585","static/chunks/585-583a890eeb7c32d0.js","909","static/chunks/909-057d7c0deffaebb4.js","185","static/chunks/app/layout-a28f631de27278c1.js"],"Toaster"]
+0:["vasoGodKejwqVDS1LpAil",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}],null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/fd1457fc06caa102.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_f367f3","children":["$","$L4",null,{"children":["$","$L5",null,{"children":[["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}],["$","$L9",null,{}],["$","$La",null,{}]]}]}]}]}]],null],null],["$Lb",null]]]]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"TechKoodaram"}],["$","meta","3",{"name":"description","content":"TechKoodaram Website"}],["$","meta","4",{"name":"next-size-adjust"}]]
+1:null
