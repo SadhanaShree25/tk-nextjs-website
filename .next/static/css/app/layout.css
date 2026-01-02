@@ -648,9 +648,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .prose :where(p):not(:where([class~="not-prose"],[class~="not-prose"] *)){
   margin-top: 1.25em;
-  margin-bottom: 1.2em;
-  font-size: 18px;
-  line-height: 1.8;
+  margin-bottom: 1em;
+  font-size: 16px;
+  line-height: 1.6;
 }
 .prose :where([class~="lead"]):not(:where([class~="not-prose"],[class~="not-prose"] *)){
   color: var(--tw-prose-lead);
@@ -754,9 +754,9 @@ h1, h2, h3, h4, h5, h6 {
 .prose :where(h1):not(:where([class~="not-prose"],[class~="not-prose"] *)){
   color: var(--tw-prose-headings);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   margin-top: 0;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.6em;
   line-height: 1.1111111;
 }
 .prose :where(h1 strong):not(:where([class~="not-prose"],[class~="not-prose"] *)){
@@ -766,9 +766,9 @@ h1, h2, h3, h4, h5, h6 {
 .prose :where(h2):not(:where([class~="not-prose"],[class~="not-prose"] *)){
   color: var(--tw-prose-headings);
   font-weight: 600;
-  font-size: 28px;
+  font-size: 24px;
   margin-top: 2em;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.6em;
   line-height: 1.3333333;
 }
 .prose :where(h2 strong):not(:where([class~="not-prose"],[class~="not-prose"] *)){
@@ -778,9 +778,9 @@ h1, h2, h3, h4, h5, h6 {
 .prose :where(h3):not(:where([class~="not-prose"],[class~="not-prose"] *)){
   color: var(--tw-prose-headings);
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   margin-top: 1.6em;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.5em;
   line-height: 1.6;
 }
 .prose :where(h3 strong):not(:where([class~="not-prose"],[class~="not-prose"] *)){
@@ -976,8 +976,8 @@ h1, h2, h3, h4, h5, h6 {
   --tw-prose-invert-pre-bg: rgb(0 0 0 / 50%);
   --tw-prose-invert-th-borders: #4b5563;
   --tw-prose-invert-td-borders: #374151;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
 }
 .prose :where(picture > img):not(:where([class~="not-prose"],[class~="not-prose"] *)){
   margin-top: 0;
@@ -1060,6 +1060,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 .prose :where(.prose > :last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)){
   margin-bottom: 0;
+}
+.prose :where(@media (min-width: 768px)):not(:where([class~="not-prose"],[class~="not-prose"] *)){
+  font-size: 16px;
+  line-height: 1.6;
+}
+.prose :where(@media (min-width: 768px)):not(:where([class~="not-prose"],[class~="not-prose"] *)) p{
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 1.2em;
+}
+.prose :where(@media (min-width: 768px)):not(:where([class~="not-prose"],[class~="not-prose"] *)) h1{
+  font-size: 36px;
+  margin-bottom: 0.8em;
+}
+.prose :where(@media (min-width: 768px)):not(:where([class~="not-prose"],[class~="not-prose"] *)) h2{
+  font-size: 28px;
+  margin-bottom: 0.8em;
+}
+.prose :where(@media (min-width: 768px)):not(:where([class~="not-prose"],[class~="not-prose"] *)) h3{
+  font-size: 22px;
+  margin-bottom: 0.6em;
 }
 .sr-only{
   position: absolute;
@@ -2125,9 +2146,6 @@ h1, h2, h3, h4, h5, h6 {
 .p-4{
   padding: 1rem;
 }
-.p-5{
-  padding: 1.25rem;
-}
 .p-6{
   padding: 1.5rem;
 }
@@ -2218,6 +2236,9 @@ h1, h2, h3, h4, h5, h6 {
 .pb-4{
   padding-bottom: 1rem;
 }
+.pb-5{
+  padding-bottom: 1.25rem;
+}
 .pl-16{
   padding-left: 4rem;
 }
@@ -2259,12 +2280,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .pt-8{
   padding-top: 2rem;
-}
-.pb-5{
-  padding-bottom: 1.25rem;
-}
-.pt-32{
-  padding-top: 8rem;
 }
 .text-left{
   text-align: left;
@@ -3913,6 +3928,11 @@ html {
     padding: 3rem;
   }
 
+  .md\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .md\:py-20{
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -3921,6 +3941,10 @@ html {
   .md\:py-32{
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .md\:pt-32{
+    padding-top: 8rem;
   }
 
   .md\:text-2xl{

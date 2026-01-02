@@ -56,12 +56,12 @@ export default async function BlogPost({ params }: PageProps) {
     });
 
     return (
-      <article className="container mx-auto px-5 pt-32 pb-5 max-w-[720px]">
+      <article className="container mx-auto px-4 pt-20 md:px-5 md:pt-32 pb-5 w-full max-w-[720px]">
         <div className="mb-8">
           <Link href="/blog" className="text-primary hover:underline mb-4 inline-block">
             &larr; Back to Blog
           </Link>
-          <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
           <div className="text-gray-500 mb-8 border-b pb-4">
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
