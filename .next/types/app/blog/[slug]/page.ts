@@ -1,4 +1,4 @@
-// File: /Users/selvakumarduraipandian/Documents/Projects/techkoodaram-nextjs/src/app/blog/[slug]/page.tsx
+// File: C:\Users\ganes\OneDrive\Attachments\techkooram\tk-nextjs-website\src\app\blog\[slug]\page.tsx
 import * as entry from '../../../../../src/app/blog/[slug]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -56,7 +56,7 @@ export default async function BlogPost({ params }: PageProps) {
     });
 
     return (
-      <article className="container mx-auto px-4 py-12 max-w-3xl">
+      <article className="container mx-auto px-5 pt-32 pb-5 max-w-[720px]">
         <div className="mb-8">
           <Link href="/blog" className="text-primary hover:underline mb-4 inline-block">
             &larr; Back to Blog
@@ -110,7 +110,7 @@ export default async function BlogPost({ params }: PageProps) {
           </div>
         ) : null}
 
-        <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:text-primary prose-a:text-primary prose-img:rounded-lg">
+        <div className="prose dark:prose-invert max-w-none prose-headings:font-bold prose-headings:text-primary prose-a:text-primary prose-img:rounded-lg">
           {content}
           <div className="my-10 border-t pt-8">
             <BlogShare title={post.title} slug={post.slug} />

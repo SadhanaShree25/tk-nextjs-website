@@ -14,14 +14,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${siteUrl}/blog`,
       changeFrequency: 'weekly',
       priority: 0.8,
-    }    
+    }
   ];
 
   let posts: any[] = [];
   try {
-     posts = getAllPosts();
+    posts = getAllPosts();
   } catch (error) {
-     console.error('Sitemap generation error:', error);
+    console.error('Sitemap generation error:', error);
   }
 
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
@@ -30,6 +30,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
-  
+
   return [...staticRoutes, ...blogRoutes];
 }
