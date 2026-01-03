@@ -56,7 +56,7 @@ export default async function BlogPost({ params }: PageProps) {
     });
 
     return (
-      <article className="container mx-auto px-4 pt-20 md:px-5 md:pt-32 pb-5 w-full max-w-[720px]">
+      <article className="container mx-auto px-4 pt-32 md:px-5 md:pt-32 pb-24 w-full max-w-[720px]">
         <div className="mb-8">
           <Link href="/blog" className="text-primary hover:underline mb-4 inline-block">
             &larr; Back to Blog
