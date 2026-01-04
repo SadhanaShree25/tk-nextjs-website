@@ -67,7 +67,7 @@ const Hero = () => {
               <ArrowRight size={20} />
             </Button>
 
-            <Button
+            {/* <Button
               variant="ghost"
               size="xl"
               className="text-primary hover:bg-primary/10 border-2 border-primary/20"
@@ -75,7 +75,7 @@ const Hero = () => {
             >
               Call for Speakers
               <Mic size={20} />
-            </Button>
+            </Button> */}
           </div>
 
         </div>
