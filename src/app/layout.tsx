@@ -4,21 +4,64 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import QueryProvider from "@/components/QueryProvider"; // We'll create this wrapper
 import "@/index.css";
-import { Inter } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+    subsets: ["latin"],
+    variable: "--font-inter"
+});
+const roboto = Roboto({
+    weight: ["300", "400", "500", "700"],
+    subsets: ["latin"],
+    variable: "--font-roboto",
+});
 
 export const metadata = {
     metadataBase: new URL("https://techkoodaram.in"),
-    title: "TechKoodaram",
-    description: "TechKoodaram Website",
+    title: {
+        default: "TechKoodaram | Grassroots Tech Community in South Tamil Nadu",
+        template: "%s | TechKoodaram",
+    },
+    description: "TechKoodaram is a grassroots tech community bridging the gap between talent and access. Based in South Tamil Nadu (Sivakasi to Tenkasi), we focus on Learning, Building, and Sharing.",
+    keywords: ["TechKoodaram", "Tamil Nadu Tech Community", "Sivakasi Tech", "Tenkasi Tech", "Developer Community India", "Grassroots Tech", "Open Source Tamil Nadu", "Tech Events Tamil Nadu"],
+    authors: [{ name: "TechKoodaram Team" }],
+    creator: "TechKoodaram",
+    publisher: "TechKoodaram",
+    formatDetection: {
+        email: false,
+        address: false,
+        telephone: false,
+    },
     alternates: {
         canonical: "/",
     },
-    verification: {
-        google: "search_console_verification_code_here", // Placeholder for actual code if provided later
+    openGraph: {
+        title: "TechKoodaram | Grassroots Tech Community",
+        description: "Talent exists everywhere. Access doesn’t. Join the grassroots tech community of South Tamil Nadu.",
+        url: "https://techkoodaram.in",
+        siteName: "TechKoodaram",
+        images: [
+            {
+                url: "/og-image.png",
+                width: 1200,
+                height: 630,
+                alt: "TechKoodaram Community",
+            },
+        ],
+        locale: "en_IN",
+        type: "website",
     },
+    twitter: {
+        card: "summary_large_image",
+        title: "TechKoodaram | Grassroots Tech Community",
+        description: "Bridging the gap between talent and access in South Tamil Nadu.",
+        images: ["/og-image.png"],
+    },
+    verification: {
+        google: "search_console_verification_code_here",
+    },
+    category: "technology",
 };
 
 export default function RootLayout({
@@ -27,8 +70,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <body className={inter.className}>
+        <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
+            <body className={`${inter.className} font-sans`}>
                 {/* Google Analytics */}
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=G-ZJ6MQWNN6W"

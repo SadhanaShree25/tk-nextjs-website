@@ -1,11 +1,18 @@
-"use client";
-
 import Hero from "@/components/Hero";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JoinCTA from "@/components/JoinCTA";
 import CommunityPillars from "@/components/CommunityPillars";
 import ContactSection from "@/components/ContactSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "TechKoodaram | Grassroots Tech Community in South Tamil Nadu",
+    description: "Welcome to TechKoodaram, a grassroots tech community for developers, students, and tech enthusiasts in South Tamil Nadu. Learn, Build, and Share with us.",
+    alternates: {
+        canonical: "https://techkoodaram.in",
+    },
+};
 
 const Index = () => {
     return (

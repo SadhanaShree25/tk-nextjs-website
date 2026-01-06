@@ -1,5 +1,6 @@
 import { Heart, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="techKoodaram Logo" width={230} height={50} className="w-[230px] h-auto" />
+            <Image src="/logo.png" alt="techKoodaram Logo" width={230} height={50} className="w-[230px] h-auto" />
           </Link>
 
           {/* Links */}

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Github } from "lucide-react";
 import Link from "next/link";
@@ -19,9 +20,9 @@ const Header = () => {
   }, []);
 
   const navItems: { label: string; href: string }[] = [
-    // { label: "Blogs", href: "/blog" },
+    { label: "Blogs", href: "/blog" },
+    { label: "Community", href: "/#community" },
     // { label: "About", href: "/#about" },
-    // { label: "Community", href: "/#community" },
     // { label: "Gatherings", href: "/#gatherings" },
     // { label: "Blog", href: "/#blog" },
     // { label: "Products", href: "/products" },
@@ -39,7 +40,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="techKoodaram Logo" width={230} height={50} className="w-[230px] h-auto" />
+              <Image src="/logo.png" alt="techKoodaram Logo" priority loading="eager" width={230} height={50} className="w-[230px] h-auto" />
             </div>
           </Link>
 

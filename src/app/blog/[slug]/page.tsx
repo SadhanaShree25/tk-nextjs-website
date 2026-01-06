@@ -60,6 +60,37 @@ export default async function BlogPost({ params }: PageProps) {
 
     return (
       <article className="container mx-auto px-4 pt-32 md:px-5 md:pt-32 pb-24 w-full max-w-[720px]">
+        {/* Blog Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              headline: post.title,
+              description: post.description,
+              image: post.coverImage ? `https://techkoodaram.in${post.coverImage}` : "https://techkoodaram.in/og-image.png",
+              datePublished: post.date,
+              author: {
+                "@type": "Person",
+                name: post.author,
+                url: post.authorUrl || "https://techkoodaram.in",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "TechKoodaram",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://techkoodaram.in/logo.png",
+                },
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `https://techkoodaram.in/blog/${params.slug}`,
+              },
+            }),
+          }}
+        />
         <div className="mb-8">
           <Link href="/blog" className="text-primary hover:underline mb-4 inline-block">
             &larr; Back to Blog
