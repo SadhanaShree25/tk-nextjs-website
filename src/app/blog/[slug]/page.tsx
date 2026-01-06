@@ -28,6 +28,9 @@ export async function generateMetadata({ params }: PageProps) {
     return {
       title: `${post.title} | TechKoodaram`,
       description: post.description,
+      alternates: {
+        canonical: `/blog/${params.slug}`,
+      },
       openGraph: {
         title: post.title,
         description: post.description,

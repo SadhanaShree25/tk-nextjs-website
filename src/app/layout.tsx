@@ -10,8 +10,12 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+    metadataBase: new URL("https://techkoodaram.in"),
     title: "TechKoodaram",
     description: "TechKoodaram Website",
+    alternates: {
+        canonical: "/",
+    },
     verification: {
         google: "search_console_verification_code_here", // Placeholder for actual code if provided later
     },

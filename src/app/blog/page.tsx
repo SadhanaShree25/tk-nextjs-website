@@ -4,6 +4,9 @@ import { getAllPosts } from '@/lib/blog';
 export const metadata = {
     title: 'Blog | TechKoodaram',
     description: 'Updates, tutorials, and stories from the TechKoodaram community.',
+    alternates: {
+        canonical: '/blog',
+    },
 };
 
 export default function BlogIndex() {
