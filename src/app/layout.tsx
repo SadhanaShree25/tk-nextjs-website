@@ -73,19 +73,23 @@ export default function RootLayout({
         <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
             <body className={`${inter.className} font-sans`}>
                 {/* Google Analytics */}
-                <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=G-ZJ6MQWNN6W"
-                    strategy="afterInteractive"
-                />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+                {process.env.NODE_ENV === "production" && (
+                    <>
+                        <Script
+                            src="https://www.googletagmanager.com/gtag/js?id=G-ZJ6MQWNN6W"
+                            strategy="afterInteractive"
+                        />
+                        <Script id="google-analytics" strategy="afterInteractive">
+                            {`
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
 
-            gtag('config', 'G-ZJ6MQWNN6W');
-          `}
-                </Script>
+                                gtag('config', 'G-ZJ6MQWNN6W');
+                            `}
+                        </Script>
+                    </>
+                )}
 
                 {/* Schema Markup */}
                 <Script id="schema-org" type="application/ld+json">
