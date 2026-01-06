@@ -59,12 +59,12 @@ export default async function BlogPost({ params }: PageProps) {
     });
 
     return (
-      <article className="container mx-auto px-4 py-12 max-w-3xl">
+      <article className="container mx-auto px-4 pt-32 md:px-5 md:pt-32 pb-24 w-full max-w-[720px]">
         <div className="mb-8">
           <Link href="/blog" className="text-primary hover:underline mb-4 inline-block">
             &larr; Back to Blog
           </Link>
-          <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">{post.title}</h1>
           <div className="text-gray-500 mb-8 border-b pb-4">
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
@@ -113,7 +113,7 @@ export default async function BlogPost({ params }: PageProps) {
           </div>
         ) : null}
 
-        <div className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:text-primary prose-a:text-primary prose-img:rounded-lg">
+        <div className="prose dark:prose-invert max-w-none prose-headings:font-bold prose-headings:text-primary prose-a:text-primary prose-img:rounded-lg">
           {content}
           <div className="my-10 border-t pt-8">
             <BlogShare title={post.title} slug={post.slug} />

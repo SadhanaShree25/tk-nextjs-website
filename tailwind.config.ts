@@ -14,7 +14,59 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],
+        sans: ['Inter', 'Roboto', 'sans-serif'],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#333',
+            fontSize: '15px', // Mobile base
+            lineHeight: '1.5',
+            maxWidth: '100%',
+            p: {
+              fontSize: '16px', // Mobile p
+              lineHeight: '1.6',
+              marginBottom: '1em',
+            },
+            h1: {
+              fontSize: '28px', // Mobile h1
+              marginBottom: '0.6em',
+              fontWeight: '700',
+            },
+            h2: {
+              fontSize: '24px', // Mobile h2
+              marginBottom: '0.6em',
+              fontWeight: '600',
+            },
+            h3: {
+              fontSize: '20px', // Mobile h3
+              marginBottom: '0.5em',
+              fontWeight: '600',
+            },
+            // Desktop Overrides
+            '@media (min-width: 768px)': {
+              fontSize: '16px',
+              lineHeight: '1.6',
+              p: {
+                fontSize: '18px',
+                lineHeight: '1.8',
+                marginBottom: '1.2em',
+              },
+              h1: {
+                fontSize: '36px',
+                marginBottom: '0.8em',
+              },
+              h2: {
+                fontSize: '28px',
+                marginBottom: '0.8em',
+              },
+              h3: {
+                fontSize: '22px',
+                marginBottom: '0.6em',
+              },
+            },
+          },
+        },
       },
       colors: {
         border: "hsl(var(--border))",
@@ -110,5 +162,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
