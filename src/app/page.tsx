@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "TechKoodaram | Grassroots Tech Community in South Tamil Nadu",
     description: "Welcome to TechKoodaram, a grassroots tech community for developers, students, and tech enthusiasts in South Tamil Nadu. Learn, Build, and Share with us.",
     alternates: {
-        canonical: "https://techkoodaram.in",
+        canonical: "https://www.techkoodaram.in/",
     },
 };
 

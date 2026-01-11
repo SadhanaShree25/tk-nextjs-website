@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/blog';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const siteUrl = 'https://techkoodaram.in';
+  const siteUrl = 'https://www.techkoodaram.in';
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {

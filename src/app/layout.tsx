@@ -18,7 +18,7 @@ const roboto = Roboto({
 });
 
 export const metadata = {
-    metadataBase: new URL("https://techkoodaram.in"),
+    metadataBase: new URL("https://www.techkoodaram.in"),
     title: {
         default: "TechKoodaram | Grassroots Tech Community in South Tamil Nadu",
         template: "%s | TechKoodaram",
