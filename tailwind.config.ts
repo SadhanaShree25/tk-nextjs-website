@@ -151,6 +151,18 @@ export default {
           "0%, 100%": { opacity: "0.4" },
           "50%": { opacity: "0.7" },
         },
+        "attention-pulse": {
+          "0%, 100%": { 
+            backgroundColor: "transparent", 
+            color: "hsl(var(--accent))",
+            boxShadow: "inset 0 0 0 1px hsl(var(--accent))"
+          },
+          "50%": { 
+            backgroundColor: "hsl(var(--accent))", 
+            color: "hsl(var(--accent-foreground))",
+            boxShadow: "inset 0 0 0 1px transparent"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -159,6 +171,7 @@ export default {
         "fade-in": "fade-in 0.5s ease-out forwards",
         "gentle-float": "gentle-float 6s ease-in-out infinite",
         "warm-pulse": "warm-pulse 4s ease-in-out infinite",
+        "attention-pulse": "attention-pulse 2s ease-in-out infinite",
       },
     },
   },

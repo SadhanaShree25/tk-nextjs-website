@@ -7,7 +7,7 @@ import heroImage from "@/assets/hero-gathering.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-start pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-start pt-28 md:pt-40 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -62,7 +62,7 @@ const Hero = () => {
               size="xl"
               onClick={() => window.open("https://chat.whatsapp.com/JnWLnxuQAZm9pIZNUWk9Nk", "_blank")}
             >
-              Join via WhatsApp
+              Join Our WhatsApp Community
               <ArrowRight size={20} />
             </Button>
 

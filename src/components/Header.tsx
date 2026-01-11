@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Github } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import RegistrationBanner from "./RegistrationBanner";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -125,6 +126,7 @@ const Header = () => {
           </nav>
         )}
       </div>
+      <RegistrationBanner />
     </header>
   );
 };
