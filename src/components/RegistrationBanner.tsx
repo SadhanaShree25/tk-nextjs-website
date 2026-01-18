@@ -12,9 +12,9 @@ const RegistrationBanner = () => {
     };
 
     if (!isVisible) return null;
-
+{/*
     return (
-        <div className="bg-primary text-primary-foreground py-2 px-4 relative z-[60]">
+       <div className="bg-primary text-primary-foreground py-2 px-4 relative z-[60]">
             <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-2 md:gap-6 text-sm">
                 <span className="font-semibold text-center md:text-left">
                     Applications open for techKoodaram #1!
@@ -50,7 +50,10 @@ const RegistrationBanner = () => {
                 </button>
             </div>
         </div>
+        
     );
+    */}
+    return null;
 };
 
 export default RegistrationBanner;
