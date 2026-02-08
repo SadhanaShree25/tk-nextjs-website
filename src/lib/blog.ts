@@ -40,7 +40,7 @@ export function getAllPosts(): BlogPost[] {
   const posts = slugs
     .filter((slug) => slug.endsWith('.mdx'))
     .map((slug) => getPostBySlug(slug))
-    // Sort posts by date in descending order
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    // Sort by date descending: newest first (top), oldest last (bottom)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   return posts;
 }
